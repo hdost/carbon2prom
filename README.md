@@ -3,34 +3,6 @@
 The purpose of carbon2prom is to bring graphite compatible applications to be compatible with prometheus `remote_write`.
 
 
-## TODO
-
-### Graphite Receiver
-* [] UDP? Do I care?
-* [] Pickle Protocol?
-* []
-* []
-
-
-### Config file
-* [] Yaml file input
-* [] Regex mapping
-* []
-* []
-
-### Reliability
-* [] File Backed Queue/WAL concept
-* []
-* []
-
-### Remote Write
-* [] Batch writing
-* [] Backoff
-* []
-
-## Proto
-* [] Remove gogoproto
-
 ## Developing
 
 ### Prerequisites
@@ -45,11 +17,17 @@ The purpose of carbon2prom is to bring graphite compatible applications to be co
 
 `cargo test`
 
+### FAQ
+
+Q: Why is the primary branch `trunk`?
+A: Because trees have branches and they have trunks. And this is a source tree.
+
 ## Contributing
 
 * File an Issue if there's something wrong.
 * Submit a PR if you want to fix that something wrong.
 ** File an issue also if you think it needs it.
+
 
 ## Code Of Conduct
 
