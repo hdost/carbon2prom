@@ -8,8 +8,15 @@ edition = "2018"
 
 [dependencies]
 bytes = "1"
-log = "0.4"
-tokio = { version = "1", features = ["rt-multi-thread","net","macros"]}
+clap = "~2.33.x"
+config = "~0.x.x"
+env_logger = "~0.8.x"
 gotham = "0.5.0"
+lazy_static = "~1.x.x"
+log = "0.4"
+prometheus = "~0.x.x"
+notify = "~4.x.x"
+tokio = { version = "1", features = ["rt-multi-thread","net","macros"]}
+
 carbon = {path = "lib/carbon" }
 prom-remote-write = {path = "lib/prom-remote-write" }

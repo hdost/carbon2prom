@@ -4,9 +4,7 @@ pub const METRIC_NAME_LABEL: &str = "__name__";
 pub mod client {
     use crate::data::WriteRequest;
     use prost::Message;
-    use reqwest;
     use reqwest::header;
-    use snap;
     static APP_USER_AGENT: &str = concat!(env!("CARGO_PKG_NAME"), "/", env!("CARGO_PKG_VERSION"),);
     static REMOTE_WRITE_VERSION: &str = "0.1.0";
 

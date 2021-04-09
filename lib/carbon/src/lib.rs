@@ -29,13 +29,13 @@ fn parse_graphite(input:&str) -> Result<GraphiteDataPoint, &'static str> {
             let path = cap.name("path").unwrap().as_str();
             let value = cap.name("value").unwrap().as_str().parse::<f64>().unwrap();
             let time = cap.name("time");
-            let ts = match time {
+            let timestamp = match time {
                 Some(value) => {
                     Some(value.as_str().parse::<u32>().unwrap())
                 }
                 _ => None
             };
-            Ok(GraphiteDataPoint{path:path,tags:HashMap::new(),value:value,timestamp:ts})
+            Ok(GraphiteDataPoint{path,tags:HashMap::new(),value,timestamp})
         }
         _ => Err("Input line doesn't match"),
 
